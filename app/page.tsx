@@ -1,46 +1,31 @@
+import { Navbar } from "@/components/landing/Navbar";
+import { Hero } from "@/components/landing/Hero";
 import { IntentBox } from "@/components/landing/IntentBox";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { Hexagon } from "lucide-react";
 
 export default function LandingPage() {
   return (
-    <div className="relative w-full min-h-screen">
-      <img
-        src="/strad.gif"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-      />
-      <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+    <main className="flex flex-col w-full min-h-screen bg-black text-white">
+      <Navbar />
 
-      <div className="relative flex-1 flex flex-col items-center justify-start px-6 pt-[15vh] pb-20 z-10">
-        {/* Hero */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <div className="relative">
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                
-              </div>
-            </div>
-          </div>
-          <h1 className="text-[5.5rem] md:text-[6.8rem] lg:text-[8.5rem] font-extrabold tracking-tight leading-tight mb-4 bg-clip-text text-transparent relative">
-            <span className="relative inline-block bg-gradient-to-r from-white/90 via-primary/80 to-white/70 bg-clip-text text-transparent">
-              Stacy
-              <span className="absolute -inset-1 bg-gradient-to-r from-white/60 via-transparent to-white/40 opacity-30 blur-xl pointer-events-none animate-pulse" aria-hidden="true" />
-            </span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-lg mx-auto leading-relaxed">
-            Build and deploy Soroban smart contracts and frontend with AI-powered assistance.
-          </p>
-        </div>
-
-        {/* Intent Box */}
+      {/* 1. Hero Section (Video + Chat) */}
+      <div className="relative z-10 flex flex-col items-center w-full min-h-screen px-6 pt-[10vh] pb-20 overflow-hidden">
+        <Hero />
         <IntentBox />
+      </div>
 
-        {/* How It Works */}
+      {/* 2. How It Works Section (Theme Background) */}
+      <div className="relative z-10 w-full px-6 py-24 bg-[#030014] border-t border-white/5 overflow-hidden">
+
+        {/* Deep space gradient background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-black to-black pointer-events-none" />
+
+        {/* Additional accent blobs */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[128px] pointer-events-none" />
+
         <HowItWorks />
       </div>
-    </div>
+    </main>
   );
 }

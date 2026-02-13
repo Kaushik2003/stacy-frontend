@@ -8,9 +8,10 @@ interface LiquidMetalButtonProps {
   label?: string
   onClick?: () => void
   viewMode?: "text" | "icon"
+  width?: number
 }
 
-export function LiquidMetalButton({ label = "Generate", onClick, viewMode = "text" }: LiquidMetalButtonProps) {
+export function LiquidMetalButton({ label = "Generate", onClick, viewMode = "text", width }: LiquidMetalButtonProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isPressed, setIsPressed] = useState(false)
   const [ripples, setRipples] = useState<Array<{ x: number; y: number; id: number }>>([])
@@ -30,16 +31,17 @@ export function LiquidMetalButton({ label = "Generate", onClick, viewMode = "tex
         shaderHeight: 46,
       }
     } else {
+      const targetWidth = width || 142
       return {
-        width: 142,
+        width: targetWidth,
         height: 46,
-        innerWidth: 138,
+        innerWidth: targetWidth - 4,
         innerHeight: 42,
-        shaderWidth: 142,
+        shaderWidth: targetWidth,
         shaderHeight: 46,
       }
     }
-  }, [viewMode])
+  }, [viewMode, width])
 
   useEffect(() => {
     const styleId = "shader-canvas-style-exploded"
