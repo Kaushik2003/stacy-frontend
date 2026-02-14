@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useWallet } from "@/hooks/useWallet";
 import { LiquidMetalButton } from "@/components/liquid-metal-button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -68,8 +69,9 @@ export function Navbar() {
                         </h1>
                     </Link>
 
-                    {/* Desktop Navigation - Connect Wallet */}
+                    {/* Desktop Navigation - Connect Wallet and Theme Toggle */}
                     <div className="hidden md:flex items-center gap-3">
+                        <ThemeToggle />
                         <LiquidMetalButton
                             label={isConnecting ? "Connecting..." : isConnected ? formatAddress(address!) : "Connect Wallet"}
                             onClick={handleWalletClick}
@@ -101,7 +103,8 @@ export function Navbar() {
                         className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm top-[72px]"
                         onClick={() => setMobileMenuOpen(false)}
                     />
-                    <div className="md:hidden fixed top-[72px] left-2 right-2 bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-2xl p-4 space-y-2 z-50 ring-1 ring-white/10 flex justify-center">
+                    <div className="md:hidden fixed top-[72px] left-2 right-2 bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-2xl p-4 space-y-2 z-50 ring-1 ring-white/10 flex flex-col items-center gap-3">
+                        <ThemeToggle />
                         <LiquidMetalButton
                             label={isConnecting ? "Connecting..." : isConnected ? formatAddress(address!) : "Connect Wallet"}
                             onClick={() => {

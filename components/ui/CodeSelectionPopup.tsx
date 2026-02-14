@@ -26,7 +26,7 @@ export function CodeSelectionPopup({ isVisible, position, onAction, onClose }: C
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 5 }}
           transition={{ duration: 0.15 }}
-          className="fixed z-[100] bg-zinc-900 border border-zinc-700 rounded-lg shadow-xl p-1 flex items-center gap-0.5"
+          className="fixed z-[100] bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 rounded-lg shadow-xl p-1 flex items-center gap-0.5 transition-colors"
           style={{ left: position.x, top: position.y }}
         >
           {actions.map((action) => (
@@ -35,7 +35,7 @@ export function CodeSelectionPopup({ isVisible, position, onAction, onClose }: C
               onClick={() => onAction(action.id)}
               className={cn(
                 "flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-medium transition-colors",
-                "hover:bg-zinc-800 text-zinc-400 hover:text-zinc-100",
+                "hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-600 dark:text-zinc-400 hover:text-black dark:hover:text-zinc-100",
                 action.color
               )}
             >
@@ -43,10 +43,10 @@ export function CodeSelectionPopup({ isVisible, position, onAction, onClose }: C
               {action.label}
             </button>
           ))}
-          <div className="w-px h-5 bg-zinc-700 mx-0.5" />
+          <div className="w-px h-5 bg-gray-300 dark:bg-zinc-700 mx-0.5" />
           <button
             onClick={onClose}
-            className="p-1.5 rounded-md text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800 transition-colors"
+            className="p-1.5 rounded-md text-gray-500 dark:text-zinc-500 hover:text-black dark:hover:text-zinc-300 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors"
           >
             <X className="w-3.5 h-3.5" />
           </button>
