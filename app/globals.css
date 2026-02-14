@@ -99,6 +99,65 @@
   --status-error: 0 72% 51%;
 }
 
+.light {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: #f5f5f5;
+  --card-foreground: #1a1a1a;
+  --popover: #f5f5f5;
+  --popover-foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --secondary: #e5e5e5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #e5e5e5;
+  --muted-foreground: #666666;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a855f7;
+  --chart-1: #a855f7;
+  --chart-2: #a855f7;
+  --chart-3: #a855f7;
+  --chart-4: #a855f7;
+  --chart-5: #a855f7;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #a855f7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e5e5;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a855f7;
+  --purple-accent: #a855f7;
+
+  /* IDE-specific tokens */
+  --ide-bg: 0 0% 98%;
+  --ide-panel: 0 0% 93%;
+  --ide-panel-hover: 0 0% 88%;
+  --ide-border: 0 0% 85%;
+  --ide-glow: 270 70% 50%;
+
+  /* Terminal */
+  --terminal-bg: 0 0% 96%;
+  --terminal-header: 0 0% 91%;
+
+  /* macOS window dots */
+  --dot-close: 0 72% 51%;
+  --dot-minimize: 45 93% 47%;
+  --dot-maximize: 142 71% 45%;
+
+  /* Status colors */
+  --status-idle: 0 0% 50%;
+  --status-compiling: 45 100% 50%;
+  --status-deploying: 270 70% 50%;
+  --status-success: 142 76% 36%;
+  --status-error: 0 72% 51%;
+}
+
 @theme inline {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";

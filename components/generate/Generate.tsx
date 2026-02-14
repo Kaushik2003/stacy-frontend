@@ -1664,7 +1664,7 @@ export function create${contractName}Client(publicKey: string): ${contractName}C
 
   return (
     <SandboxProvider sandbox={stellarIDE.sandbox}>
-      <div className="flex flex-col h-screen bg-zinc-950 text-zinc-100 overflow-hidden font-sans">
+      <div className="flex flex-col h-screen bg-white dark:bg-zinc-950 text-black dark:text-zinc-100 overflow-hidden font-sans transition-colors duration-300">
         <GlobalTopBar
           ideMode={ideMode}
           onIdeModeChange={handleModeChange}

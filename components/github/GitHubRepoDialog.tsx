@@ -157,7 +157,7 @@ export function GitHubRepoDialog({
                           <div className="flex items-center gap-2">
                             <span>{repo.name}</span>
                             {repo.private && (
-                              <span className="text-xs bg-zinc-700 px-1.5 py-0.5 rounded">
+                              <span className="text-xs bg-muted px-1.5 py-0.5 rounded">
                                 Private
                               </span>
                             )}
@@ -177,13 +177,13 @@ export function GitHubRepoDialog({
                       onChange={(e) => setSelectedBranch(e.target.value)}
                       placeholder="main"
                     />
-                    <div className="flex items-center gap-2 text-xs text-zinc-500">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <ExternalLink className="w-3 h-3" />
                       <a
                         href={selectedRepo.html_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-zinc-300 underline"
+                        className="hover:text-foreground underline"
                       >
                         {selectedRepo.full_name}
                       </a>

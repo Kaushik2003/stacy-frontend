@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ChatProvider } from '@/contexts/ChatContext'
 import { GitHubProvider } from '@/contexts/GitHubContext'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -32,12 +33,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-sans antialiased bg-zinc-950 text-zinc-100`}>
-        <GitHubProvider>
-          <ChatProvider>
-            {children}
-          </ChatProvider>
-        </GitHubProvider>
+      <body className={`font-sans antialiased bg-white dark:bg-zinc-950 text-black dark:text-zinc-100 transition-colors duration-300`}>
+        <ThemeProvider>
+          <GitHubProvider>
+            <ChatProvider>
+              {children}
+            </ChatProvider>
+          </GitHubProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
