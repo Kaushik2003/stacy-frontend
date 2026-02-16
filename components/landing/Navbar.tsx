@@ -38,7 +38,7 @@ export function Navbar() {
     };
 
     return (
-        <nav className="fixed z-50 w-full px-2 pt-2 top-0 left-0 right-0">
+        <nav className="fixed z-50 w-full px-2 pt-7 top-0 left-0 right-0">
             <div
                 className={cn(
                     "mx-auto px-4 sm:px-6 transition-all duration-500 ease-out lg:px-5",
