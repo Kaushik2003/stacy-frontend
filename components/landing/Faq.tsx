@@ -41,18 +41,18 @@ const FAQRow = ({
     onClick: () => void;
 }) => {
     return (
-        <div className="border-t border-white border-opacity-100 last:border-b">
+        <div className="border-t-2 border-black last:border-b-2">
             <button
                 onClick={onClick}
-                className="w-full flex items-center justify-between py-10 text-left group"
+                className="w-full flex items-center justify-between py-10 text-left group hover:bg-black/5 transition-colors px-2"
             >
-                <span className="text-white text-xl md:text-2xl font-medium tracking-wide transition-colors">
+                <span className="text-black text-xl md:text-2xl font-bold tracking-tight transition-colors">
                     {item.question}
                 </span>
 
                 {/* Icon */}
-                <span className="text-white transition-transform duration-300">
-                    {isOpen ? <X size={28} strokeWidth={1.5} /> : <Plus size={28} strokeWidth={1.5} />}
+                <span className="text-black transition-transform duration-300">
+                    {isOpen ? <X size={28} strokeWidth={2.5} /> : <Plus size={28} strokeWidth={2.5} />}
                 </span>
             </button>
 
@@ -65,7 +65,7 @@ const FAQRow = ({
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="text-white text-base md:text-lg leading-relaxed max-w-3xl pb-10">
+                        <p className="text-black/70 text-lg md:text-xl leading-relaxed max-w-3xl pb-10 px-2 font-medium">
                             {item.answer}
                         </p>
                     </motion.div>
@@ -82,7 +82,7 @@ export default function FAQ() {
         <section className="text-white px-6 py-40 border-t border-white/5">
             <div className="max-w-[90rem] mx-auto">
                 {/* Title */}
-                <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-white uppercase">
+                <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-black uppercase text-center">
                     FAQ
                 </h2>
 

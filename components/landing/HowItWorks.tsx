@@ -6,8 +6,8 @@ import { useRef, useState, useEffect } from "react";
 // Mockup Components for each step
 const Step1Mockup = () => (
   <div className="w-full h-full p-4 flex flex-col gap-3">
-    <div className="text-xs text-neutral-500 mb-1">Prompt</div>
-    <div className="bg-[#DAD7CD] border border-black/5 rounded-lg p-3 h-24 relative overflow-hidden group shadow-inner">
+    <div className="text-xs text-black/60 mb-1">Prompt</div>
+    <div className="bg-white border-2 border-black rounded-lg p-3 h-24 relative overflow-hidden group shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       <div className="flex gap-2 items-center mb-2">
         <div className="w-2 h-2 rounded-full bg-red-400" />
         <div className="w-2 h-2 rounded-full bg-yellow-400" />
@@ -55,7 +55,7 @@ const Step2Mockup = () => (
 
 const Step3Mockup = () => (
   <div className="w-full h-full p-4 flex flex-col justify-center gap-3">
-    <div className="bg-green-100 border border-green-200 rounded-lg p-3 flex items-center gap-3 shadow-sm">
+    <div className="bg-white border-2 border-black rounded-lg p-3 flex items-center gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       <div className="bg-green-500 p-1.5 rounded-full">
         <Check className="w-3 h-3 text-white" />
       </div>
@@ -126,7 +126,7 @@ export function HowItWorks() {
   return (
     <section ref={ref} className="w-full py-32 px-6 border-t border-white/5 overflow-hidden">
       <div className="max-w-[90%] mx-auto">
-        <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-white uppercase text-center tracking-tight">
+        <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-black uppercase text-center tracking-tight">
           How It Works
         </h2>
 
@@ -143,10 +143,10 @@ export function HowItWorks() {
               <motion.div
                 key={i}
                 style={style}
-                className="group relative flex flex-col p-1 rounded-3xl bg-[#E5D7C4] border border-black/5 shadow-[0_0_20px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_0_30px_-5px_rgba(0,0,0,0.2)] hover:border-[#354230]/30 transition-all duration-500 h-full max-w-sm mx-auto md:max-w-none w-full"
+                className="group relative flex flex-col p-4 rounded-3xl bg-[#87e64b] border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-500 h-full max-w-sm mx-auto md:max-w-none w-full"
               >
                 {/* Number Badge */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#EAE7DD] border border-black/5 flex items-center justify-center z-20 shadow-xl group-hover:border-[#D98E28]/50 transition-colors">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#CCFF00] border-2 border-black flex items-center justify-center z-20 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-colors">
                   <span className="text-[#D98E28] font-mono font-bold text-lg">0{i + 1}</span>
                   <div className="absolute -top-1 -right-1 text-[#D98E28]">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L15 9L24 12L15 15L12 24L9 15L0 12L9 9L12 0Z" /></svg>
@@ -157,7 +157,7 @@ export function HowItWorks() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-[#D98E28]/20 blur-[10px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
 
                 {/* UI Mockup Area */}
-                <div className="h-64 w-full bg-[#F5F5F0] rounded-t-[20px] rounded-b-lg overflow-hidden relative border-b border-black/5">
+                <div className="h-64 w-full bg-[#EFFFD1] rounded-t-[20px] rounded-b-lg overflow-hidden relative border-b-2 border-black">
                   {/* Subtle Gradient in Mockup BG */}
                   <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-50" />
                   <step.Mockup />
