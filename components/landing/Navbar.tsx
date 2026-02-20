@@ -43,8 +43,8 @@ export function Navbar() {
                 className={cn(
                     "mx-auto px-4 sm:px-6 transition-all duration-500 ease-out lg:px-5",
                     scrolled
-                        ? "max-w-4xl rounded-[24px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] ring-1 ring-white/10"
-                        : "max-w-6xl rounded-[24px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] ring-1 ring-white/10"
+                        ? "max-w-4xl rounded-full border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.12)] ring-1 ring-white/10"
+                        : "max-w-6xl rounded-full border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] ring-1 ring-white/10"
                 )}
             >
                 <div className="relative flex items-center justify-between py-3 lg:py-4">

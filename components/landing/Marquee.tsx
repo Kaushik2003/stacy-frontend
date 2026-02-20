@@ -10,6 +10,14 @@ const companies = [
         name: "RiseIn",
         url: "/risein.png",
     },
+    {
+        name: "Github",
+        url: "/github.png",
+    },
+    {
+        name: "Vercel",
+        url: "/vercel.png",
+    },
 ]
 
 export function Logos() {
@@ -25,7 +33,7 @@ export function Logos() {
                             width={240}
                             height={100}
                             src={company.url || "/placeholder.svg"}
-                            className="object-contain h-full w-full brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+                            className="object-contain h-full w-full brightness-0 opacity-80 hover:opacity-100 transition-opacity duration-300"
                             alt={company.name}
                         />
                     </div>

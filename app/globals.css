@@ -1,6 +1,34 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: 'Adelphe Floreal';
+  src: url('/fonts/otf/Adelphe-FlorealRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelphe Floreal';
+  src: url('/fonts/otf/Adelphe-FlorealBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelphe Fructidor Regular';
+  src: url('/fonts/otf/Adelphe-FructidorRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelphe Fructidor Regular';
+  src: url('/fonts/otf/Adelphe-FructidorBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -160,6 +188,7 @@
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(calc(-100% - var(--gap)));
     }
@@ -169,6 +198,7 @@
     from {
       transform: translateY(0);
     }
+
     to {
       transform: translateY(calc(-100% - var(--gap)));
     }
@@ -179,6 +209,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings:

@@ -8,13 +8,13 @@ const TerminalGraphic = () => {
   return (
     <div className="w-full h-full flex flex-col gap-4 font-mono text-sm text-neutral-600">
       {/* Command Bar */}
-      <div className="flex-none border border-black/5 p-2 rounded bg-white/50 flex flex-col justify-center gap-2">
+      <div className="flex-none border-2 border-black p-2 rounded-lg bg-white/50 flex flex-col justify-center gap-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
         <div className="flex items-center gap-2 px-1">
           <span className="text-green-600 font-bold">{">"}</span>
           <span className="text-neutral-600">cat src/lib.rs</span>
         </div>
         {/* Progress Bar */}
-        <div className="h-3 w-full bg-transparent rounded-full overflow-hidden border border-black/5 p-[1px] opacity-60">
+        <div className="h-3 w-full bg-transparent rounded-full overflow-hidden border-2 border-black p-[1px] opacity-60">
           <div className="h-full w-full bg-neutral-200 rounded-full overflow-hidden relative">
             <div className="h-full bg-neutral-400 w-full" />
           </div>
@@ -22,7 +22,7 @@ const TerminalGraphic = () => {
       </div>
 
       {/* Code Window */}
-      <div className="flex-grow border border-black/5 border-t-[4px] border-t-black/5 p-4 rounded bg-white/50 relative overflow-hidden flex flex-col shadow-sm">
+      <div className="flex-grow border-2 border-black border-t-[6px] p-4 rounded-xl bg-white/80 relative overflow-hidden flex flex-col shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="absolute top-3 right-3 flex gap-1.5">
           <div className="w-1.5 h-1.5 rounded-full border border-black/10" />
           <div className="w-1.5 h-1.5 rounded-full border border-black/10" />
@@ -197,15 +197,15 @@ const LanguagesGraphic = () => {
 
       <div className="grid grid-cols-2 gap-4 h-full content-center relative z-10">
         {/* Block 1 */}
-        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border border-black/10 transform hover:-translate-y-1 transition-transform shadow-sm">
+        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border-2 border-black transform hover:-translate-y-1 transition-transform shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           JS
         </div>
         {/* Block 2 */}
-        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border border-black/10 transform hover:-translate-y-1 transition-transform translate-y-2 shadow-sm">
+        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border-2 border-black transform hover:-translate-y-1 transition-transform translate-y-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           RUST
         </div>
         {/* Block 3 */}
-        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border border-black/10 transform hover:-translate-y-1 transition-transform col-span-2 w-2/3 mx-auto shadow-sm">
+        <div className="bg-white text-black font-bold font-mono text-xs p-2 text-center border-2 border-black transform hover:-translate-y-1 transition-transform col-span-2 w-2/3 mx-auto shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           WASM
         </div>
       </div>
@@ -218,12 +218,12 @@ const SecurityGraphic = () => {
   return (
     <div className="w-full h-full flex items-center justify-center relative p-6">
       {/* Ticket Shape */}
-      <div className="relative bg-[#EAE7DD] border border-black/10 w-48 h-24 flex items-center justify-center overflow-hidden transform hover:scale-105 transition-transform duration-300 shadow-sm">
+      <div className="relative bg-[#EAE7DD] border-2 border-black w-48 h-24 flex items-center justify-center overflow-hidden transform hover:scale-105 transition-transform duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="absolute -left-1.5 top-0 bottom-0 w-3 flex flex-col justify-between py-1">
-          {[...Array(8)].map((_, i) => <div key={i} className="w-2.5 h-2.5 rounded-full bg-[#F5F5F0] border border-black/10" />)}
+          {[...Array(8)].map((_, i) => <div key={i} className="w-2.5 h-2.5 rounded-full bg-[#fbe1b1] border border-black" />)}
         </div>
         <div className="absolute -right-1.5 top-0 bottom-0 w-3 flex flex-col justify-between py-1">
-          {[...Array(8)].map((_, i) => <div key={i} className="w-2.5 h-2.5 rounded-full bg-[#F5F5F0] border border-black/10" />)}
+          {[...Array(8)].map((_, i) => <div key={i} className="w-2.5 h-2.5 rounded-full bg-[#fbe1b1] border border-black" />)}
         </div>
 
         <span className="font-mono font-bold text-[#D98E28]/80 text-2xl tracking-[0.2em] rotate-[-5deg]">SECURE</span>
@@ -316,7 +316,7 @@ const Card = ({
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
     viewport={{ once: true }}
-    className={`flex flex-col p-1 border border-black/5 bg-[#E5D7C4] overflow-hidden rounded-3xl hover:border-[#D98E28]/30 transition-all duration-300 relative group shadow-[0_0_20px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_0_30px_-5px_rgba(0,0,0,0.2)] ${className}`}
+    className={`flex flex-col p-4 border-2 border-black bg-[#87e64b] overflow-hidden rounded-3xl hover:-translate-y-1 transition-all duration-300 relative group shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${className}`}
   >
     {/* Text Section */}
     <div className="p-5 z-10 relative">
@@ -329,7 +329,7 @@ const Card = ({
     </div>
 
     {/* Graphic Section */}
-    <div className="flex-grow bg-[#F5F5F0] relative flex items-center justify-center overflow-hidden p-4 rounded-b-[20px] rounded-t-lg border border-black/5 shadow-sm">
+    <div className="flex-grow bg-[#EFFFDC] relative flex items-center justify-center overflow-hidden p-4 rounded-xl border-2 border-black shadow-inner">
       {children}
     </div>
   </motion.div>
@@ -339,7 +339,12 @@ const Card = ({
 
 export default function StacyBentoGrid() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-24 md:px-8 md:pt-40 md:pb-24 border-t border-white/10">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-24 md:px-8 md:pt-40 md:pb-24 border-t border-white/10">
+      <div className="max-w-[90%] mx-auto w-full">
+        <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-black uppercase text-center tracking-tight">
+          Features
+        </h2>
+      </div>
       <div className="max-w-[90%] w-full grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(320px,auto)]">
 
         {/* 1. LEFT COLUMN - TALL (SIMPLE AND POWERFUL) */}
