@@ -124,7 +124,7 @@ export function HowItWorks() {
   const r3 = useTransform(scrollYProgress, [0, 1], [12, 0]);
 
   return (
-    <section ref={ref} className="w-full py-32 px-6 border-t border-white/5 overflow-hidden">
+    <section ref={ref} className="w-full py-32 px-6 bg-[#fbe1b1] overflow-hidden">
       <div className="max-w-[90%] mx-auto">
         <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-black uppercase text-center tracking-tight">
           How It Works
@@ -143,12 +143,12 @@ export function HowItWorks() {
               <motion.div
                 key={i}
                 style={style}
-                className="group relative flex flex-col p-4 rounded-3xl bg-[#87e64b] border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-500 h-full max-w-sm mx-auto md:max-w-none w-full"
+                className="group relative flex flex-col p-4 rounded-[40px] bg-[#FF9644] border-[3px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-500 h-full max-w-sm mx-auto md:max-w-none w-full"
               >
                 {/* Number Badge */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#CCFF00] border-2 border-black flex items-center justify-center z-20 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-colors">
-                  <span className="text-[#D98E28] font-mono font-bold text-lg">0{i + 1}</span>
-                  <div className="absolute -top-1 -right-1 text-[#D98E28]">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#CCFF00] border-[3px] border-black flex items-center justify-center z-20 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-colors">
+                  <span className="text-black font-mono font-black text-xl">0{i + 1}</span>
+                  <div className="absolute -top-1 -right-1 text-black">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L15 9L24 12L15 15L12 24L9 15L0 12L9 9L12 0Z" /></svg>
                   </div>
                 </div>
@@ -157,16 +157,16 @@ export function HowItWorks() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-[#D98E28]/20 blur-[10px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
 
                 {/* UI Mockup Area */}
-                <div className="h-64 w-full bg-[#EFFFD1] rounded-t-[20px] rounded-b-lg overflow-hidden relative border-b-2 border-black">
+                <div className="h-64 w-full bg-[#FFCE99] rounded-[24px] overflow-hidden relative border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   {/* Subtle Gradient in Mockup BG */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-50" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-30" />
                   <step.Mockup />
                 </div>
 
                 {/* Content Area */}
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold mb-3 text-[#354230]">{step.title}</h3>
-                  <p className="text-sm text-neutral-600 leading-relaxed font-medium">
+                <div className="pt-8 pb-4 flex flex-col flex-1">
+                  <h3 className="text-2xl font-black mb-3 text-black tracking-tight">{step.title}</h3>
+                  <p className="text-sm text-[#1A1A1A]/90 leading-relaxed font-bold">
                     {step.description}
                   </p>
                 </div>

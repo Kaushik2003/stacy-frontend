@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   description: 'Build Web3 dapps with dual-mode IDE for smart contracts and frontend',
   generator: 'Stacy',
   icons: {
-    icon: '/logo.webp',
-    shortcut: '/logo.webp',
-    apple: '/logo.webp',
+    icon: '/logo1.png',
+    shortcut: '/logo1.png',
+    apple: '/logo1.png',
   },
 }
 

@@ -316,20 +316,20 @@ const Card = ({
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
     viewport={{ once: true }}
-    className={`flex flex-col p-4 border-2 border-black bg-[#87e64b] overflow-hidden rounded-3xl hover:-translate-y-1 transition-all duration-300 relative group shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${className}`}
+    className={`flex flex-col p-4 border-[3px] border-black bg-[#FF9644] overflow-hidden rounded-[40px] hover:-translate-y-1 transition-all duration-300 relative group shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] ${className}`}
   >
     {/* Text Section */}
     <div className="p-5 z-10 relative">
-      <h3 className="text-base font-mono font-bold tracking-wider text-[#354230] uppercase mb-2">
+      <h3 className="text-xl font-black tracking-tight text-black uppercase mb-2">
         {header}
       </h3>
-      <p className="text-sm leading-snug text-neutral-600 font-medium tracking-tight">
+      <p className="text-sm leading-snug text-[#1A1A1A]/90 font-bold tracking-tight">
         {description}
       </p>
     </div>
 
     {/* Graphic Section */}
-    <div className="flex-grow bg-[#EFFFDC] relative flex items-center justify-center overflow-hidden p-4 rounded-xl border-2 border-black shadow-inner">
+    <div className="flex-grow bg-[#FFCE99] relative flex items-center justify-center overflow-hidden p-6 rounded-[24px] border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       {children}
     </div>
   </motion.div>
@@ -339,7 +339,7 @@ const Card = ({
 
 export default function StacyBentoGrid() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-24 md:px-8 md:pt-40 md:pb-24 border-t border-white/10">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-24 md:px-8 md:pt-40 md:pb-24 bg-[#fbe1b1]">
       <div className="max-w-[90%] mx-auto w-full">
         <h2 className="text-6xl md:text-7xl font-bold mb-24 tracking-tighter text-black uppercase text-center tracking-tight">
           Features
@@ -369,7 +369,7 @@ export default function StacyBentoGrid() {
         {/* 3. RIGHT TOP - SPEAKS YOUR LANGUAGE */}
         <Card
           header="SPEAKS YOUR LANGUAGE"
-          description="Clients for JS, Rust, Python, and more. Auto-generated bindings."
+          description="Clients for JS, Rust, Wasm, and more. Auto-generated bindings."
           delay={0.3}
         >
           <LanguagesGraphic />
