@@ -51,19 +51,18 @@ export function Navbar() {
                     {/* Logo Section */}
                     <Link href="/" className="flex items-center gap-2">
                         <Image
-                            src="/logo.webp"
+                            src="/logo1.png"
                             alt="Stacy Logo"
                             width={32}
                             height={32}
-                            className="h-8 w-8 object-contain"
+                            className="h-8 w-8 object-cover rounded-full"
                             onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                             }}
                         />
-                        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent relative">
-                            <span className="relative inline-block bg-gradient-to-r from-white/90 via-primary/80 to-white/70 bg-clip-text text-transparent">
+                        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-black relative">
+                            <span className="relative inline-block text-[#7D5656]">
                                 Stacy
-                                <span className="absolute -inset-1 bg-gradient-to-r from-white/60 via-transparent to-white/40 opacity-30 blur-xl pointer-events-none animate-pulse" aria-hidden="true" />
                             </span>
                         </h1>
                     </Link>

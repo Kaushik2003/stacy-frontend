@@ -62,7 +62,7 @@ const Footer = () => {
                 <ScrollBaseAnimation
                     delay={500}
                     baseVelocity={-3}
-                    clasname='font-bold tracking-[-0.07em] leading-[90%] text-[#87e64b] text-10xl md:text-8xl'
+                    clasname='font-bold tracking-[-0.07em] leading-[90%] text-[#f3701e] text-10xl md:text-8xl'
                 >
                     Star the repo if you like it
                 </ScrollBaseAnimation>
@@ -175,7 +175,7 @@ const Footer = () => {
                                 </li>
                                 <li className='text-xl font-medium'>
                                     <a
-                                        href='https://github.com/'
+                                        href='https://github.com/Kaushik2003/stacy-frontend/'
                                         target='_blank'
                                         className='underline'
                                     >
@@ -184,7 +184,7 @@ const Footer = () => {
                                 </li>
                                 <li className='text-xl font-medium'>
                                     <a
-                                        href='https://twitter.com/'
+                                        href='https://x.com/stacydotide/'
                                         target='_blank'
                                         className='underline'
                                     >
@@ -205,7 +205,7 @@ const Footer = () => {
                     </div>
 
                     <div className="w-full h-full flex justify-center items-end pointer-events-none select-none leading-none pb-0 pt-10">
-                        <h1 ref={ref} className={`${font.className} text-[24vw] md:text-[25vw] text-[#87E64B] leading-[0.75] mix-blend-normal tracking-wide uppercase whitespace-nowrap drop-shadow-[12px_12px_0px_rgba(0,0,0,1)]`} style={{ WebkitTextStroke: '3px black' }}>
+                        <h1 ref={ref} className={`${font.className} text-[24vw] md:text-[25vw] text-[#FF9644] leading-[0.75] mix-blend-normal tracking-wide uppercase whitespace-nowrap drop-shadow-[12px_12px_0px_rgba(0,0,0,1)]`} style={{ WebkitTextStroke: '3px black' }}>
                             {['S', 't', 'a', 'c', 'y'].map((letter, i) => (
                                 <motion.span
                                     key={i}
